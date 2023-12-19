@@ -11,6 +11,7 @@ import { ErasPlacesSlider } from '../ErasComponents';
 import { MdLocationPin } from "react-icons/md";
 import { CloseIcon, LeftArrow } from '@/assets/svgsComponents';
 import { RotatingLines } from 'react-loader-spinner';
+import Image from 'next/image';
 
 
 const Poets = ({ dataPoetsByEra, dataAllCitiesMap, isLayerActive
@@ -202,7 +203,7 @@ const Poets = ({ dataPoetsByEra, dataAllCitiesMap, isLayerActive
                       <div onClick={() => handleBoxClick(index)} className={`${styles.box_container} `}>
                         <div className={`${styles.box} ${activePoet === index ? styles.active : ''}`}>
                           <div className={styles.img_container}>
-                            <img src={poet.icon} alt={poet.name} />
+                            <Image width={130} height={143} src={poet.icon} alt={poet.name} />
                           </div>
                           <div className={styles.name}>
                             <Typography>{poet.name}</Typography>
@@ -328,7 +329,7 @@ const Poets = ({ dataPoetsByEra, dataAllCitiesMap, isLayerActive
                       <div className={styles.box_container}>
                         <div className={styles.box_header}>
                           <div className={styles.img_container}>
-                            <img src={cityData.icon} alt={""} />
+                            <img src={cityData.icon} />
 
                           </div>
                           <div className={styles.title}>
